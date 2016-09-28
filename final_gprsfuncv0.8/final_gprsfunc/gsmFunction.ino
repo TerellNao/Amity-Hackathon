@@ -190,6 +190,8 @@ String gsmLocationLongitude(String locationData)
   //Longitude
    longitude = locationData.substring(firstCommaIndex+1, 
                         secondCommaIndex);
+  
+  return longitude;
 
 }
 
@@ -204,5 +206,7 @@ String gsmLocationLatitude(String locationData)
 
   latitude = locationData.substring(secondCommaIndex+1, 
                         thirdCommaIndex);
+  
+  return latitude;
 
 }
