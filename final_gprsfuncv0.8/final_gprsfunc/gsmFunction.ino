@@ -184,6 +184,12 @@ String gsmLocationLongitude(String locationData)
   int firstCommaIndex = locationData.indexOf(',');
   int secondCommaIndex = locationData.indexOf(',', firstCommaIndex + 1);
   int thirdCommaIndex = locationData.indexOf(',',secondCommaIndex + 1);
+  
+  if(firstCommaIndex == -1)
+  {
+     Serial.println("Error. Location not found. Returning...");  //triangulation failed
+     return;
+  }
 
   String longitude;
 
@@ -201,6 +207,12 @@ String gsmLocationLatitude(String locationData)
   int firstCommaIndex = locationData.indexOf(',');
   int secondCommaIndex = locationData.indexOf(',', firstCommaIndex + 1);
   int thirdCommaIndex = locationData.indexOf(',',secondCommaIndex + 1);
+  
+  if(firstCommaIndex == -1)
+  {
+     Serial.println("Error. Location not found. Returning...");    //triangulation failed
+     return;
+  }
 
   String latitude;
 
